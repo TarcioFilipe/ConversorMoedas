@@ -10,18 +10,18 @@ export default function Picker(props) {
 
   return (
     <RNPickerSelect
-    placeholder={placeholder}
+      placeholder={placeholder}
       items={props.moedas}
-      onValueChange={(valor) => console.log(valor)}
+      onValueChange={ (valor) => props.onChange(valor) }
       style={{
         inputIOS: {
-            fontSize: 20,
-            color: '#000'
+          fontSize: 20,
+          color: "#000",
         },
         inputAndroid: {
-            fontSize: 20,
-            color: '#000'
-        }
+          fontSize: 20,
+          color: "#000",
+        },
       }}
     />
   );
